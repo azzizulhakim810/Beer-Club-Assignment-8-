@@ -3,8 +3,26 @@ import logo2 from '../../images/beer-svgrepo-com.svg';
 import './Cart.css';
 
 const Cart = (props) => {
-  console.log(props.cart);
-  console.log(props.cart.name);
+  const {cart} = props;
+  // console.log(props.cart);
+  // console.log(cart);
+
+
+  document.getElementById("bt-one").addEventListener("click", () => {
+    const getTheInput = 
+    console.log('hello');
+  } )
+
+
+  let price = 0;
+
+  for(const product of cart) {
+    price = product.attenuation_level + price;
+    ;
+    console.log(product);
+  }
+  
+
   return (
     <div className='sticky-sidebar'>
       
@@ -18,7 +36,7 @@ const Cart = (props) => {
       <div className="tax-amount">
         <h1>Add Tax</h1>
         <div className="tax-btn">
-          <button>10</button>
+          <button id='bt-one'>10</button>
           <button>15</button>
           <button>20</button>
           <button>25</button>
@@ -28,14 +46,14 @@ const Cart = (props) => {
 
       <div className="total-details">
         <h1>Total Details</h1>
-        <p>Beer Price:$<span></span></p>
-        <p>Tax Amount:$<span></span></p>
+        <p>Beer Price: $<span>{price}</span></p>
+        <p>Tax Amount: $<span></span></p>
       </div>
 
       <div className="complete-btn">
         <button>Complete Purchase</button>
       </div>
-      <p>Selected Items:{props.cart.length}</p>
+      <p>Selected Items: {props.cart.length}</p>
       </div>
 
 
