@@ -1,0 +1,22 @@
+.navbar {
+  width: 100%;
+  background-color: rgb(2, 2, 2);
+  display: inline-block;
+  text-align: center;
+  padding: 20px 0px;
+}
+.navbar img {
+  width: 12%;
+}
+.navbar h1, h2 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 35px;
+}
+.change-color-red {
+  color: rgb(255, 10, 10);
+}
+.change-color-yellow {
+  color: rgb(255, 251, 3);
+}
