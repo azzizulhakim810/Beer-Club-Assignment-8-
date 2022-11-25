@@ -1,5 +1,7 @@
 import React from 'react';
+import { useState } from 'react';
 import logo2 from '../../images/beer-svgrepo-com.svg';
+import Break from '../Break/Break';
 import './Cart.css';
 
 const Cart = (props) => {
@@ -8,11 +10,12 @@ const Cart = (props) => {
   // console.log(cart);
 
 
-  document.getElementById("bt-one").addEventListener("click", () => {
-    const getTheInput = 
-    console.log('hello');
-  } )
+const taxAmount = [10, 15, 20, 25, 30];
+const [taxes, setTaxes] = useState(0);
 
+const taxFunction = (showTaxAmount) => {
+  setTaxes(showTaxAmount);
+}
 
   let price = 0;
 
@@ -20,6 +23,10 @@ const Cart = (props) => {
     price = product.attenuation_level + price;
     ;
     console.log(product);
+  }
+
+  const modalShowUp = () => {
+    alert('Purchase Complete');
   }
   
 
@@ -36,24 +43,26 @@ const Cart = (props) => {
       <div className="tax-amount">
         <h1>Add Tax</h1>
         <div className="tax-btn">
-          <button id='bt-one'>10</button>
-          <button>15</button>
-          <button>20</button>
-          <button>25</button>
-          <button>30</button>
+          {taxAmount.map((singleTax,i) => (
+            <Break
+            taxFunction = {taxFunction}
+            singleTax = {singleTax}
+            key = {i}
+            ></Break>
+          ))}
         </div>
       </div>
 
       <div className="total-details">
         <h1>Total Details</h1>
+        <p>Selected Items: {props.cart.length}</p>
         <p>Beer Price: $<span>{price}</span></p>
-        <p>Tax Amount: $<span></span></p>
+        <p>Tax Amount: $<span>{taxes}</span></p>
       </div>
 
       <div className="complete-btn">
-        <button>Complete Purchase</button>
+        <button onClick={() => modalShowUp()}>Complete Purchase</button>
       </div>
-      <p>Selected Items: {props.cart.length}</p>
       </div>
 
 

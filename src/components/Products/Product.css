@@ -7,7 +7,7 @@
 }
 .total_card {
   background-color: rgb(240, 240, 240);
-  height: 550px;
+  height: 500px;
   box-shadow: 0px 0px 5px rgb(172, 172, 172);
   border-radius: 10px;
 }
@@ -34,4 +34,33 @@
   cursor: pointer;
   color: #ee9f00;
   background-color: #e0dfdd;
+}
+
+
+
+/* For Tablet Device  */
+@media screen and (max-width:768px) {
+  
+}
+
+/* For Mobile Device  */
+@media screen and (max-width:425px) {
+  
+  .total_card {
+    height: 550px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+  .card-text {
+    font-size: 18px;
+  }
+
+  .card-btn {
+    font-size: 18px;
+    padding: 10px 0px 10px 0px;
+    
+  }
+
 }

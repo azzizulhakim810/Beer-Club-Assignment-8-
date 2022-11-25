@@ -19,7 +19,7 @@ const Product = (props) => {
 
       <div className='card-body'>
       <h5 className='card-title font-weight-bold'>{name}</h5>
-      <p className='card-text'>{description.slice(0,100)}</p>
+      <p className='card-text'>{description.slice(0,80)}...</p>
       <p className='card-text'>Price: ${attenuation_level}</p>
     </div>
     <div className='btn'>

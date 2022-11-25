@@ -1,0 +1,30 @@
+.tax-amounts {
+  display:inline-flex;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.tax-amounts button {
+  padding: 8px;
+  border-radius: 30%;
+  background-color: #FFA800;
+  color: #fff;
+  border: 0px;
+}
+
+.tax-amounts button:hover {
+  background-color: #fff;
+  color: #FFA800;
+  border: 0px;
+}
+
+
+/* For Mobile Device  */
+@media screen and (max-width:425px) {
+  
+  .tax-amounts button {
+    padding: 8px;
+    margin: 3px;
+  }
+
+}
